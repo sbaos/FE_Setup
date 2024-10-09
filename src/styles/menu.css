@@ -1,0 +1,163 @@
+.menu-item {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+        background-color: gray !important;
+    }
+
+
+
+    &.active {
+        font-weight: bold;
+
+    }
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 13vw;
+    min-width: fit-content;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 5px;
+
+    .bg-dark {
+        background-color: black !important;
+        color: white !important;
+    }
+
+    .bg-light {
+        background-color: white;
+        color: black;
+    }
+}
+
+.menu-item:hover>.submenu {
+    display: block;
+}
+
+/* Handle nested submenus */
+.submenu>div {
+    position: relative;
+}
+
+.submenu>div:hover>.submenu-z-2 {
+    display: block;
+}
+
+.submenu-z-2 {
+    left: 100%;
+    top: 0;
+    position: absolute;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submenu-z-2>div:hover>.submenu-z-3 {
+    display: block;
+}
+
+.submenu-z-3 {
+    left: 100%;
+    top: 0;
+    position: absolute;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submenu .nav-link {
+    padding: 8px 16px;
+    white-space: nowrap;
+    display: block;
+}
+
+.submenu .submenu-p:hover {
+    background-color: gray !important;
+}
+
+/* 
+.sidebar-menu {
+    width: 100%;
+    max-height: 100vh;
+
+    .menu-item {
+        display: block;
+        padding: 10px 0px;
+        color: #333;
+        cursor: pointer;
+
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+
+            &:hover {
+                background-color: gray;
+                color: white;
+            }
+
+            &.active {
+                font-weight: bold;
+                background-color: darkgray;
+            }
+        }
+
+        &:hover {
+            background-color: gray;
+        }
+
+        .submenu {
+            display: none;
+            top: 0;
+            z-index: 1000;
+            min-width: fit-content;
+            background-color: inherit;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+
+            .submenu-p {
+                display: block;
+
+                &:hover {
+                    background-color: gray;
+                }
+
+                .nav-link {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+
+        .submenu-z-2,
+        .submenu-z-3 {
+            display: none;
+            left: 100%;
+            top: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        &.submenu-open>.submenu {
+            display: block;
+        }
+    }
+}
+
+.sidebar-menu {
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+    }
+} */

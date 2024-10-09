@@ -1,0 +1,54 @@
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  /* Limiting sidebar height to viewport */
+  max-height: 100vh;
+  overflow-x: hidden;
+  z-index: 1040;
+  transition: width 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-right: 1px solid #ddd;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Sidebar collapsed state */
+.sidebar.collapsed {
+  width: 0;
+  overflow-y: hidden;
+  /* Hide scrollbar when collapsed */
+  box-shadow: none;
+  border-right: none;
+}
+
+/* Sidebar expanded state */
+.sidebar.expanded {
+  width: 250px;
+  overflow-y: auto;
+  /* Allow scrolling when expanded */
+  box-shadow: 2px 0 5px rgba(10, 222, 201, 0.1);
+}
+
+/* Sidebar content transitions */
+.sidebar-content {
+  background-color: rgb(177, 255, 255) !important;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.collapsed .sidebar-content {
+  opacity: 0;
+}
+
+/* Body styles */
+.body {
+  transition: margin-left 0.2s ease-in-out;
+  margin-left: 0;
+}
+
+/* Adjust body margin when sidebar is expanded */
+.body.sidebar-expanded {
+  margin-left: 250px;
+}

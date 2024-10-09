@@ -1,0 +1,37 @@
+.main-body {
+    /* color: red; */
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out, left 0.3s ease-in-out;
+    position: relative;
+    right: 0;
+    margin-top: 60px;
+    /* Height of the header */
+    /* margin-left: 250px; */
+    /* Width of the sidebar */
+    padding: 20px;
+    /* Optional padding */
+    background-color: #fff;
+    /* Background color */
+    min-height: calc(100vh - 60px);
+    width: calc(100% - 250px);
+    left: 245px;
+
+
+    /* Full height minus header */
+}
+
+.wide {
+    width: 100% !important;
+    left: 0px !important;
+
+    /* left: 0px !important; */
+}
+
+@media (max-width: 576px) {
+    .main-body {
+        width: 100% !important;
+        /* Set width to 25% */
+        left: 0 !important;
+        /* Align to the left */
+    }
+
+}

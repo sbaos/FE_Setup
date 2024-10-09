@@ -1,0 +1,27 @@
+.App {
+    width: 100%;
+    scroll-behavior: auto;
+    /* 
+    .main-sidebar-class {
+        display: none;
+    }
+
+    .header-container {
+        .header-toggle-sidebar {
+            display: none;
+        }
+    } */
+}
+
+/* @media (max-width: 576px) {
+    .main-sidebar-class {
+        display: flex !important;
+    }
+
+    .header-container {
+        .header-toggle-sidebar {
+            display: flex !important;
+        }
+    }
+
+} */

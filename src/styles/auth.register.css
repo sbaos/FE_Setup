@@ -1,0 +1,66 @@
+.registerPage-container {
+    height: 100vh;
+
+    .progress-steps {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        /* Add space between steps */
+        font-size: 16px;
+        /* Adjust text size */
+        font-weight: 500;
+        margin-bottom: 16px;
+
+        .disabled {
+            &:hover {
+                color: #28a745 !important;
+            }
+        }
+
+        .disable {
+            &:hover {
+                cursor: not-allowed !important;
+                color: #554 !important;
+            }
+        }
+    }
+
+    .progress-steps>div {
+        display: flex;
+        align-items: center;
+        color: #555;
+        /* Default text color */
+        position: relative;
+    }
+
+    .progress-steps>div::after {
+        content: '>';
+        margin-left: 10px;
+        color: #007bff;
+        /* Color for the arrows */
+    }
+
+    .progress-steps>div:last-child::after {
+        content: '';
+        /* Remove arrow from last step */
+    }
+
+    .progress-steps .active {
+        font-weight: bold;
+        color: #007bff;
+        /* Highlight active step */
+    }
+
+    .progress-steps .completed {
+        color: #28a745;
+        /* Completed steps in green */
+    }
+
+    /* Optional: Add hover effects */
+    .progress-steps>div:hover {
+        color: #0056b3;
+        cursor: pointer;
+    }
+
+}
